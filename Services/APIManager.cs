@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using UWOpenDataLib.JsonModels.Common;
 using UWOpenDataLib.JsonModels.Events;
 using UWOpenDataLib.JsonModels.Weather;
 using UWOpenDataLib.Utilities;
@@ -13,7 +14,7 @@ namespace UWOpenDataLib.Services
 {
     public class APIManager
     {
-        #region Constructors
+        #region Constructor
 
         private static APIManager _instance;
         public static APIManager Instance
@@ -49,7 +50,7 @@ namespace UWOpenDataLib.Services
 
         public async Task<Response<EventsHolidayRoot>> GetEventsHolidayData(CancellationToken cancellationToken)
         {
-            return await _dataService.GetEventsHolidayDataTaskAsync(Constants.EventsBaseUrl, cancellationToken);
+            return await _dataService.GetEventsHolidayDataTaskAsync(Constants.EventsHolidaysUrl, cancellationToken);
         }
 
         #endregion
@@ -119,7 +120,18 @@ namespace UWOpenDataLib.Services
 
         public Boolean HasError()
         {
-            return Exception != null;
+            if (Exception != null)
+            {
+                return true;
+            }
+
+            var root = Data as Root;
+            if (root != null && root.meta != null && root.meta.status == 200)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

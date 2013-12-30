@@ -7,9 +7,9 @@ using UWOpenDataLib.JsonModels.Common;
 
 namespace UWOpenDataLib.JsonModels.FoodServices
 {
-    public class FoodServicesWatCardsRoot
+    public class FoodServicesWatCardsRoot : Root
     {
-        public Meta meta { get; set; }
+        public override Meta meta { get; set; }
         public List<WatCardsData> data { get; set; }
     }
     public class WatCardsData

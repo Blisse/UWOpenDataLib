@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace UWOpenDataLib.JsonModels.Common
 {
+    public class Root
+    {
+        public virtual Meta meta { get; set; }
+    }
+
     public class Meta
     {
         public int requests { get; set; }
