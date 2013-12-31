@@ -47,6 +47,7 @@
     <Compile Include="JsonModels\Events\HolidaysModels.cs" />
     <Compile Include="JsonModels\FoodServices\AnnouncementsModels.cs" />
     <Compile Include="JsonModels\FoodServices\DietsModels.cs" />
+    <Compile Include="JsonModels\FoodServices\LocationsModels.cs" />
     <Compile Include="JsonModels\FoodServices\MenuModels.cs" />
     <Compile Include="JsonModels\FoodServices\OutletsModels.cs" />
     <Compile Include="JsonModels\FoodServices\ProductDetailsModels.cs" />

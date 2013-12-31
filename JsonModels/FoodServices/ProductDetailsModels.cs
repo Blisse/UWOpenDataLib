@@ -10,10 +10,10 @@ namespace UWOpenDataLib.JsonModels.FoodServices
 
     public class FoodServicesProductDetailsRoot : Root
     {
-        public ProductDetailsData data { get; set; }
+        public FoodServicesProductDetailsData data { get; set; }
     }
 
-    public class ProductDetailsData
+    public class FoodServicesProductDetailsData
     {
         public int product_id { get; set; }
         public string product_name { get; set; }

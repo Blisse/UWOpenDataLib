@@ -18,13 +18,21 @@ namespace UWOpenDataLib
         }
 
         public static readonly String FoodServicesMenuUrl = String.Format(BaseUrl, "foodservices/{0}/{1}/menu.json");
-        public static readonly String FoodServicesNotesUrl = String.Format(BaseUrl, "foodservices/notes.json");
+        public static readonly String FoodServicesNotesUrl = String.Format(BaseUrl, "foodservices/{0}/{1}/notes.json");
+        public static readonly String FoodServicesDietsUrl = String.Format(BaseUrl, "foodservices/diets.json");
         public static readonly String FoodServicesOutletsUrl = String.Format(BaseUrl, "foodservices/outlets.json");
-        public static readonly String FoodServicesWatCardUrl = String.Format(BaseUrl, "foodservices/watcard.json");
-        public static readonly String FoodServicesProductsUrl = String.Format(BaseUrl, "foodservices/products/{0}.json");
         public static readonly String FoodServicesLocationsUrl = String.Format(BaseUrl, "foodservices/locations.json");
-        public static readonly String FoodServicesAnnouncementsUrl = String.Format(BaseUrl, "foodservices/announcements.json");
+        public static readonly String FoodServicesWatCardUrl = String.Format(BaseUrl, "foodservices/watcard.json");
+        public static readonly String FoodServicesAnnouncementsUrl = String.Format(BaseUrl, "foodservices/{0}/{1}/announcements.json");
+        public static readonly String FoodServicesProductsUrl = String.Format(BaseUrl, "foodservices/products/{0}.json");
+
         public static readonly String CoursesBaseUrl = String.Format(BaseUrl, "courses/{0}.json");
+        public static readonly String CoursesInfoUrl = String.Format(BaseUrl, "courses/{0}/{1}.json");
+        public static readonly String CoursesScheduleUrl = String.Format(BaseUrl, "courses/{0}/{1}/schedule.json");
+        public static readonly String CoursesScheduleByClassNumberUrl = String.Format(BaseUrl, "courses/{0}/schedule.json");
+        public static readonly String CoursesPrerequisitesUrl = String.Format(BaseUrl, "courses/{0}/{1}/prerequisites.json");
+        public static readonly String CoursesExamScheduleUrl = String.Format(BaseUrl, "courses/{0}/{1}/examschedule.json");
+
         public static readonly String EventsHolidaysUrl = String.Format(BaseUrl, "events/holidays.json");
         public static readonly String WeatherUrl = String.Format(BaseUrl, "weather/current.json");
 

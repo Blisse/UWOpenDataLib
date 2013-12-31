@@ -10,10 +10,10 @@ namespace UWOpenDataLib.JsonModels.FoodServices
 
     public class FoodServicesWeeksNotesRoot : Root
     {
-        public List<WeeksNotesData> data { get; set; }
+        public List<FoodServicesWeeksNotesData> data { get; set; }
     }
 
-    public class WeeksNotesData
+    public class FoodServicesWeeksNotesData
     {
         public string date { get; set; }
         public string outlet_name { get; set; }

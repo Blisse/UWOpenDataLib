@@ -7,11 +7,11 @@ using UWOpenDataLib.JsonModels.Common;
 
 namespace UWOpenDataLib.JsonModels.FoodServices
 {
-    public class FoodServicesWatCardsRoot : Root
+    public class FoodServicesWatCardRoot : Root
     {
-        public List<WatCardsData> data { get; set; }
+        public List<FoodServicesWatCardData> data { get; set; }
     }
-    public class WatCardsData
+    public class FoodServicesWatCardData
     {
         public int vendor_id { get; set; }
         public string vendor_name { get; set; }

@@ -8,12 +8,12 @@ using UWOpenDataLib.JsonModels.Common;
 namespace UWOpenDataLib.JsonModels.Courses
 {
 
-    public class ExamScheduleRoot : Root
+    public class CoursesExamScheduleRoot : Root
     {
-        public ExamScheduleData data { get; set; }
+        public CoursesExamScheduleData data { get; set; }
     }
 
-    public class ExamScheduleData
+    public class CoursesExamScheduleData
     {
         public string course { get; set; }
         public List<Section> sections { get; set; }
