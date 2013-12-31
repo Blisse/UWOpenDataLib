@@ -9,7 +9,6 @@ namespace UWOpenDataLib.JsonModels.FoodServices
 {
     public class FoodServicesOutletsRoot : Root
     {
-        public override Meta meta { get; set; }
         public List<OutletsData> data { get; set; }
     }
 

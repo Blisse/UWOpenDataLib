@@ -9,7 +9,6 @@ namespace UWOpenDataLib.JsonModels.Weather
 {
     public class WeatherRoot: Root
     {
-        public override Meta meta { get; set; }
         public Data data { get; set; }
     }
 

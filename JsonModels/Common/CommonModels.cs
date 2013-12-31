@@ -8,7 +8,7 @@ namespace UWOpenDataLib.JsonModels.Common
 {
     public class Root
     {
-        public virtual Meta meta { get; set; }
+        public Meta meta { get; set; }
     }
 
     public class Meta
@@ -24,6 +24,7 @@ namespace UWOpenDataLib.JsonModels.Common
 
     public class Method
     {
-
+        public string disclaimer { get; set; }
+        public string license { get; set; }
     }
 }

@@ -7,14 +7,14 @@ using UWOpenDataLib.JsonModels.Common;
 
 namespace UWOpenDataLib.JsonModels.FoodServices
 {
-    public class FoodServicesAnnouncementsRoot : Root
+    public class FoodServicesDietRoot : Root
     {
-        public List<AnnouncementsData> data { get; set; }
+        public List<DietData> data { get; set; }
     }
 
-    public class AnnouncementsData
+    public class DietData
     {
-        public string date { get; set; }
-        public string ad_text { get; set; }
+        public int diet_id { get; set; }
+        public string diet_type { get; set; }
     }
 }

@@ -8,9 +8,8 @@ using UWOpenDataLib.JsonModels.Common;
 namespace UWOpenDataLib.JsonModels.Events
 {
 
-    public class EventsHolidayRoot :  Root
+    public class EventsHolidaysRoot :  Root
     {
-        public override Meta meta { get; set; }
         public List<HolidaysData> data { get; set; }
     }
 
