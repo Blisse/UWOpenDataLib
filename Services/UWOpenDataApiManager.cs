@@ -16,19 +16,13 @@ using UWOpenDataLib.Utilities;
 
 namespace UWOpenDataLib.Services
 {
-    public class APIManager
+    public class UWOpenDataApiManager
     {
         #region Constructor
-
-        private static APIManager _instance;
-        public static APIManager Instance
-        {
-            get { return _instance ?? (_instance = new APIManager()); }
-        }
-
+        
         private readonly DataService _dataService;
 
-        private APIManager()
+        public UWOpenDataApiManager()
         {
             _dataService = new DataService();
         }
@@ -177,7 +171,8 @@ namespace UWOpenDataLib.Services
                     var jsonResponse = await JsonUtil.GetJsonDataResponseAsync<T>(url, cancellationToken);
                     return new Response<T>()
                     {
-                        Data = jsonResponse
+                        Data = jsonResponse,
+                        TimeStamp = DateTime.UtcNow
                     };
                 }
                 catch (OperationCanceledException operationCanceledException)
@@ -311,5 +306,7 @@ namespace UWOpenDataLib.Services
 
             return true;
         }
+
+        public DateTime TimeStamp { get; set; }
     }
 }

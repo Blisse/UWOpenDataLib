@@ -9,10 +9,10 @@ namespace UWOpenDataLib.JsonModels.Weather
 {
     public class WeatherRoot: Root
     {
-        public Data data { get; set; }
+        public WeatherData data { get; set; }
     }
 
-    public class Data
+    public class WeatherData
     {
         public float latitude { get; set; }
         public float longitude { get; set; }

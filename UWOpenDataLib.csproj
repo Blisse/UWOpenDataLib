@@ -59,7 +59,7 @@
     <Compile Include="JsonModels\Terms\SubjectScheduleModels.cs" />
     <Compile Include="JsonModels\Weather\WeatherModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\APIManager.cs" />
+    <Compile Include="Services\UWOpenDataApiManager.cs" />
     <Compile Include="Utilities\JsonUtil.cs" />
     <Compile Include="Utilities\WebUtil.cs" />
   </ItemGroup>
