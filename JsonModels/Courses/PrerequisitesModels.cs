@@ -18,6 +18,5 @@ namespace UWOpenDataLib.JsonModels.Courses
         public string catalog_number { get; set; }
         public string title { get; set; }
         public string prerequisites { get; set; }
-        public object[][] prerequisites_parsed { get; set; }
     }
 }

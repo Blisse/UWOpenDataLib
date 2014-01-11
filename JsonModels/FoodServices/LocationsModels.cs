@@ -26,7 +26,7 @@ namespace UWOpenDataLib.JsonModels.FoodServices
         public bool is_open_now { get; set; }
         public Opening_Hours opening_hours { get; set; }
         public List<Special_Hours> special_hours { get; set; }
-        public List<object> dates_closed { get; set; }
+        public List<String> dates_closed { get; set; }
     }
 
     public class Opening_Hours

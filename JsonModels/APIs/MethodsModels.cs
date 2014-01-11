@@ -15,9 +15,9 @@ namespace UWOpenDataLib.JsonModels.APIs
 
     public class APIsMethodsData
     {
-        public int method_id { get; set; }
+        public int? method_id { get; set; }
         public string method_url { get; set; }
-        public int service_id { get; set; }
+        public int? service_id { get; set; }
         public string service_name { get; set; }
         public List<string> parameters { get; set; }
         

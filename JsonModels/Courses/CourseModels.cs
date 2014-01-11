@@ -24,7 +24,7 @@ namespace UWOpenDataLib.JsonModels.Courses
         public Offerings offerings { get; set; }
         public bool needs_department_consent { get; set; }
         public bool needs_instructor_consent { get; set; }
-        public List<Object> extra { get; set; }
+        public List<String> extra { get; set; }
         public string calendar_year { get; set; }
         public string url { get; set; }
         public string academic_level { get; set; }

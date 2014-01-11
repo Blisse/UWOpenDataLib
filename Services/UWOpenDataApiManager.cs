@@ -168,9 +168,7 @@ namespace UWOpenDataLib.Services
 
                 try
                 {
-                    Debug.WriteLine("trying url: " + url);
                     var jsonResponse = await JsonUtil.GetJsonDataResponseAsync<T>(url, cancellationToken);
-                    Debug.WriteLine("success url: " + url);
 
                     return new Response<T>()
                     {
