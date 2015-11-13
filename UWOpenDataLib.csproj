@@ -16,6 +16,7 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>d6998a0f</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,47 +36,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
-    <Compile Include="Extensions\WebExtensions.cs" />
-    <Compile Include="JsonModels\APIs\MethodsModels.cs" />
-    <Compile Include="JsonModels\APIs\ServicesModels.cs" />
-    <Compile Include="JsonModels\Common\CommonModels.cs" />
-    <Compile Include="JsonModels\Courses\ExamScheduleModels.cs" />
-    <Compile Include="JsonModels\Courses\IdModels.cs" />
-    <Compile Include="JsonModels\Courses\CourseModels.cs" />
-    <Compile Include="JsonModels\Courses\PrerequisitesModels.cs" />
-    <Compile Include="JsonModels\Courses\ScheduleModels.cs" />
-    <Compile Include="JsonModels\Courses\SubjectModels.cs" />
-    <Compile Include="JsonModels\Events\HolidaysModels.cs" />
-    <Compile Include="JsonModels\FoodServices\AnnouncementsModels.cs" />
-    <Compile Include="JsonModels\FoodServices\DietsModels.cs" />
-    <Compile Include="JsonModels\FoodServices\LocationsModels.cs" />
-    <Compile Include="JsonModels\FoodServices\MenuModels.cs" />
-    <Compile Include="JsonModels\FoodServices\OutletsModels.cs" />
-    <Compile Include="JsonModels\FoodServices\ProductDetailsModels.cs" />
-    <Compile Include="JsonModels\FoodServices\WatCardsModels.cs" />
-    <Compile Include="JsonModels\FoodServices\WeeksNotesModels.cs" />
-    <Compile Include="JsonModels\Terms\CourseScheduleModels.cs" />
-    <Compile Include="JsonModels\Terms\ExamScheduleModels.cs" />
-    <Compile Include="JsonModels\Terms\ListModels.cs" />
-    <Compile Include="JsonModels\Terms\SubjectScheduleModels.cs" />
-    <Compile Include="JsonModels\Weather\WeatherModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\UWOpenDataApiManager.cs" />
-    <Compile Include="Utilities\JsonUtil.cs" />
-    <Compile Include="Utilities\WebUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
